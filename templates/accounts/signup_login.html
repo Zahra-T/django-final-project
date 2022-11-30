@@ -1,0 +1,69 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'accounts/account.css' %}">
+<div class="cotn_principal">
+    <div class="cont_centrar">
+    
+      <div class="cont_login">
+    <div class="cont_info_log_sign_up">
+          <div class="col_md_login">
+    <div class="cont_ba_opcitiy">
+            
+            <h2>LOGIN</h2>  
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> 
+      <button class="btn_login" onclick="cambiar_login()">LOGIN</button>
+      </div>
+
+      </div>
+    <div class="col_md_sign_up">
+    <div class="cont_ba_opcitiy">
+      <h2>SIGN UP</h2>
+    
+      
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    
+      <button class="btn_sign_up" onclick="cambiar_sign_up()">SIGN UP</button>
+    </div>
+      </div>
+           </div>
+    
+        
+        <div class="cont_back_info">
+           <div class="cont_img_back_grey">
+           <img src="{% static 'account/town.jpg' %}" alt="" />
+           </div>
+           
+        </div>
+    <div class="cont_forms" >
+        <div class="cont_img_back_">
+           <img src="{% static 'account/town.jpg' %}" alt="" />
+           </div>
+     <form class="cont_form_login" method="post" action="{% url 'accounts:login' %}" >
+      {% csrf_token %}
+    <a href="#" onclick="ocultar_login_sign_up()" ><i class="material-icons">&#xE5C4;</i></a>
+       <h2>LOGIN</h2>
+     <input type="text" name='username' placeholder="Username / Email" />
+    <input type="password" name="password" placeholder="Password" />
+    <button class="btn_login" onclick="cambiar_login()">LOGIN</button>
+    <div style="margin-top: 15px;">
+      <p style="color: #757575;">Forgot your password?<a href="{% url 'password_reset' %}" style="color: white;">Click hear!</a></p> 
+    </div>
+     </form>
+     
+       <form class="cont_form_sign_up" method="post" action="{% url 'accounts:signup' %}">
+        {% csrf_token %}
+    <a href="#" onclick="ocultar_login_sign_up()"><i class="material-icons">&#xE5C4;</i></a>
+         <h2>SIGN UP</h2>
+    <input type="text" name='username' placeholder="Username" />
+    <input type="text" name='email' placeholder="Email" />
+    <input type="password" name='password1' placeholder="Password" />
+    <input type="password" name='password2' placeholder="Confirm Password" />
+    <button class="btn_sign_up" onclick="cambiar_sign_up()">SIGN UP</button>
+    
+       </form>
+    
+        </div>
+        
+      </div>
+     </div>
+    </div>
+<script src="{% static 'accounts/account.js' %}"></script>
