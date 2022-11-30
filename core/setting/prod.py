@@ -5,7 +5,7 @@ SECRET_KEY = 'django-insecure-k(is7f%*f=qen9ji#jx-vc*6g!&#c7t*xqbcxt&fml&x5+o44u
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['www.django-1-final-project.ir', 'django-1-final-project.ir']
+ALLOWED_HOSTS = ['www.django-1-final-project.ir', 'django-1-final-project.ir', 'zahra1380.pythonanywhere.com']
 
 MIDDLEWARE+=['django.middleware.clickjacking.XFrameOptionsMiddleware']
 
